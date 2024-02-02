@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Album</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .photo {
+        margin: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .photo img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<div class="container" id="album">
+    <!-- Images will be dynamically added here -->
+</div>
+
+<script>
+    const images = [
+
+"res (1).jpg",
+"res (2).jpg",
+"res (3).jpg",
+"res (4).jpg",
+"res (5).jpg",
+"res (6).jpg",
+"res (7).jpg",
+"res (8).jpg",
+"res (9).jpg",
+"res (10).jpg",
+"res (11).jpg",
+"res (12).jpg",
+"res (13).jpg",
+"res (14).jpg",
+"res (15).jpg",		
+        // Add more image paths as needed
+    ];
+
+    const albumContainer = document.getElementById("album");
+
+    images.forEach(image => {
+        const photoDiv = document.createElement("div");
+        photoDiv.classList.add("photo");
+
+        const img = document.createElement("img");
+        img.src = image;
+
+        photoDiv.appendChild(img);
+        albumContainer.appendChild(photoDiv);
+    });
+</script>
+</body>
+</html>
